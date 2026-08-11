@@ -21,7 +21,7 @@ export default function Hero() {
       className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-cream pt-32 pb-16 md:pt-40"
     >
       {/* flanking editorial panels */}
-      {/* <motion.div
+      <motion.div
         style={{ y: leftY }}
         className="pointer-events-none absolute top-[22%] left-0 hidden w-[16vw] max-w-[240px] lg:block"
       >
@@ -31,7 +31,7 @@ export default function Hero() {
           alt="Developer working across two screens of code"
           className="aspect-[3/4]"
         />
-      </motion.div> */}
+      </motion.div>
       <motion.div
         style={{ y: rightY }}
         className="pointer-events-none absolute right-0 bottom-[10%] hidden w-[18vw] max-w-[280px] lg:block"
