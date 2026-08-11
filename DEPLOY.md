@@ -101,6 +101,16 @@ password. Windows stores it after the first time.
 > A clean, well-documented repo on your GitHub profile is itself a portfolio piece.
 > Recruiters do look.
 
+**If the push fails**, it is almost always one of these five:
+
+| Message | What it means | Fix |
+| --- | --- | --- |
+| `remote origin already exists` | You ran `git remote add` twice | `git remote set-url origin <url>` instead |
+| `failed to push some refs` / `fetch first` / `unrelated histories` | You ticked "Add a README" when creating the repo, so GitHub already has a commit yours doesn't share | `git push -u origin main --force` - safe here, it only discards GitHub's auto-generated README |
+| `Repository not found` | Typo in the URL, wrong account, or the repo is private and you signed in as someone else | Re-copy the URL from the repo's green **Code** button |
+| `Support for password authentication was removed` | You typed your GitHub account password | Use the browser sign-in window, or a Personal Access Token as the password |
+| `src refspec main does not match any` | No commits on `main` | `git log --oneline` should show two commits; if empty, `git add . && git commit -m "Portfolio site"` |
+
 ### 3a-2. The update loop, from here on
 
 This is the whole workflow once the site is live. Three commands, and the deploy is
