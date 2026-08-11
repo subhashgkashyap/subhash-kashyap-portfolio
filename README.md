@@ -3,7 +3,7 @@
 Personal portfolio site for a ServiceNow Developer working across ITSM, HRSD and
 Platform Customization.
 
-**Live:** https://your-site.netlify.app
+**Live:** https://subhash-kashyap-portfolio.netlify.app/
 
 ![Subhash G Kashyap - ServiceNow Developer](public/og-image.jpg)
 

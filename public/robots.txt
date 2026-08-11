@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # After deploying, replace the domain below with your real address.
-Sitemap: https://your-site.netlify.app/sitemap.xml
+Sitemap: https://subhash-kashyap-portfolio.netlify.app/sitemap.xml
