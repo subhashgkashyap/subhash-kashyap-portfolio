@@ -2,7 +2,7 @@
 <!-- After deploying, replace the domain below with your real address. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-site.vercel.app/</loc>
+    <loc>https://your-site.netlify.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
