@@ -61,37 +61,79 @@ especially the link preview, since your whole plan is to share this on LinkedIn.
 
 ### 3a. Put the code on GitHub
 
-You need this once; after that everything is automatic. Run these in `E:\subhash-portfolio`:
+> **Already done for you:** the repo is initialised, the branch is `main`, and the first
+> commit exists (50 files; `node_modules` and `dist` correctly excluded). You only need
+> steps 2 and 3 below.
+
+**1. ~~Initialise the repo~~** - done. Verify any time with:
 
 ```bash
-git init
+git log --oneline
 ```
 
-```bash
-git add .
-```
+**2. Create an empty repository on GitHub**
 
-```bash
-git commit -m "Portfolio site"
-```
+Go to [github.com/new](https://github.com/new):
 
-Now create an empty repo at [github.com/new](https://github.com/new) named `portfolio`.
-**Don't** tick "Add a README". Then:
+- **Repository name:** `portfolio` (or `subhash-portfolio` - this becomes part of the URL)
+- **Public**, so recruiters can see it
+- **Do NOT tick** "Add a README", "Add .gitignore" or "Choose a license". The repo must be
+  completely empty or the first push will be rejected for having unrelated histories.
+- **Create repository**
+
+**3. Connect and push.** In `E:\subhash-portfolio`, replace the URL with your own:
 
 ```bash
 git remote add origin https://github.com/subhashgkashyap/portfolio.git
 ```
 
 ```bash
-git branch -M main
-```
-
-```bash
 git push -u origin main
 ```
 
-> Bonus: a clean, well-documented repo on your GitHub profile is itself a portfolio piece.
+The first push opens a browser window to sign in to GitHub. If it asks for a password on
+the command line instead, that is **not** your GitHub password - GitHub stopped accepting
+those in 2021. Either install [GitHub CLI](https://cli.github.com) and run `gh auth login`
+once, or create a Personal Access Token (GitHub → Settings → Developer settings → Personal
+access tokens → Tokens (classic) → Generate, tick the `repo` scope) and paste that as the
+password. Windows stores it after the first time.
+
+> A clean, well-documented repo on your GitHub profile is itself a portfolio piece.
 > Recruiters do look.
+
+### 3a-2. The update loop, from here on
+
+This is the whole workflow once the site is live. Three commands, and the deploy is
+automatic:
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "Swapped in my own photos"
+```
+
+```bash
+git push
+```
+
+Netlify (or Vercel) sees the push, runs `npm run build` on **their** servers, and publishes
+the new `dist`. Live in roughly a minute. **You never build or upload anything by hand, and
+your machine can be switched off the moment the push finishes.**
+
+Useful checks:
+
+```bash
+git status
+```
+
+```bash
+git log --oneline
+```
+
+`git status` lists what you have changed since the last commit. If you ever want to throw
+away uncommitted edits and go back to the last commit: `git checkout .`
 
 ### 3b. Deploy on Vercel
 
