@@ -1,0 +1,161 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Palette lifted from the reference site's visual language */
+  --color-cream: #f4eeec;
+  --color-sand: #f6f2e8;
+  --color-blush: #f1d6d4;
+  --color-rose: #e0b0af;
+  --color-cocoa: #613d3b;
+  --color-wine: #701622;
+  --color-bark: #422819;
+  --color-clay: #665142;
+  --color-ink: #383838;
+
+  /* Two families only: a modern high-contrast serif for headings, a neutral
+     grotesque for everything else. Fallbacks are Georgia / system-ui rather
+     than Times New Roman, so an unloaded font never looks like a Word document. */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-accent: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-marquee-slow: marquee 60s linear infinite;
+  --animate-caret: caret 1.05s steps(2, jump-none) infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes caret {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: #000;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 1.2px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-rose);
+    color: #000;
+  }
+}
+
+@layer components {
+  /* Uppercase, wide-tracked display headline */
+  .h-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.045em;
+    line-height: 1.06;
+  }
+
+  /* Sentence-case serif for section headlines */
+  .h-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+  }
+
+  /* Small caps label used above headlines and on cards */
+  .label-accent {
+    font-family: var(--font-accent);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  /* Pill buttons — 300px radius in the reference */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid currentColor;
+    border-radius: 300px;
+    padding: 13px 28px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1;
+    transition:
+      background-color 0.25s linear,
+      color 0.25s linear;
+  }
+
+  .btn-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 300px;
+    padding: 12px 26px;
+    background-color: var(--color-sand);
+    color: #000;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .btn-solid:hover {
+    background-color: var(--color-rose);
+  }
+
+  .rule {
+    border-top: 1px solid rgb(0 0 0 / 0.12);
+  }
+}
+
+@utility grain {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.32;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}

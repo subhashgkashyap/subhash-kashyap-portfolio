@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#701622" />
+  <g transform="translate(6.5 6.5) scale(0.51)" fill="none">
+    <path d="M50 5 L88.97 27.5 L50 50 L11.03 27.5 Z" fill="#F1D6D4" />
+    <path d="M11.03 27.5 L50 50 L50 95 L11.03 72.5 Z" fill="#E0B0AF" />
+    <path d="M88.97 27.5 L88.97 72.5 L50 95 L50 50 Z" fill="#B07E7C" />
+    <path d="M50 55 L50 95" stroke="#701622" stroke-width="4" />
+    <path d="M50 22 L66.45 31.5 L50 41 L33.55 31.5 Z" fill="#3A1D1C" />
+    <path d="M33.55 31.5 L50 41 L50 60 L33.55 50.5 Z" fill="#241011" />
+    <path d="M66.45 31.5 L66.45 50.5 L50 60 L50 41 Z" fill="#160809" />
+    <g stroke="#701622" stroke-width="3" stroke-linejoin="round">
+      <path d="M50 5 L88.97 27.5 L88.97 72.5 L50 95 L11.03 72.5 L11.03 27.5 Z" />
+      <path d="M11.03 27.5 L50 50 L88.97 27.5" />
+    </g>
+  </g>
+</svg>
