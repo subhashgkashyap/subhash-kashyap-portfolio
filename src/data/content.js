@@ -17,7 +17,7 @@ export const profile = {
   github: 'https://github.com/subhashgkashyap',
   resume: '/Subhash-G-Kashyap-Resume.pdf',
   summary:
-    'Certified ServiceNow Professional with 3+ years of experience in designing, developing, and testing ServiceNow solutions in ITSM, HRSD and Platform Customization. Skilled in implementing scalable workflows, automate processes, and deliver high-quality solutions that enhance employee experience.',
+    'Certified ServiceNow Professional with 3+ years of experience in designing, developing, and testing ServiceNow solutions in ITSM, HRSD and Platform Customization. Skilled in implementing scalable workflows, automate processes, and deliver high-quality solutions that enhance employee experience. Expertise includes customizing core ITSM modules by configuring Major Incident management lifecycles, Change Management workflows, and Service Catalog items. Proficient in platform tailoring using Business Rules, Client Scripts, UI Policies, and Flow Designer to align technical functionality with business goals.',
   about: [
     'A ServiceNow Certified Professional with over 3+ years of focused experience on the ServiceNow platform, I’ve successfully implemented and managed solutions that bridge the gap between technology and service delivery.',
     'As a dedicated and detail-oriented ServiceNow Developer and tester, I am committed to delivering solutions and assuring quality for ServiceNow implementations, including ITSM and HRSD modules. I thrive on identifying and resolving issues early in the development cycle, leveraging test scripts, and best practices to ensure smooth user experiences.',

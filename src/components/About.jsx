@@ -21,7 +21,7 @@ export default function About() {
           ))}
 
           <Reveal delay={0.24}>
-            <div className="rule mt-10 max-w-xl pt-7">
+            <div className="mt-5 max-w-xl pt-7">
               <p className="eyebrow text-black/45">education</p>
               <p className="label-accent mt-3">{education.school}</p>
               <p className="mt-2 text-black/70">
@@ -30,7 +30,7 @@ export default function About() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.3}>
+          {/* <Reveal delay={0.3}>
             <a
               href={profile.resume}
               target="_blank"
@@ -39,7 +39,7 @@ export default function About() {
             >
               download resume
             </a>
-          </Reveal>
+          </Reveal> */}
         </div>
 
         <div className="order-1 lg:order-2">

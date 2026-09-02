@@ -26,7 +26,7 @@ export default function Intro() {
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mx-auto mt-8 max-w-xl text-black/75">{profile.summary}</p>
+            <p className="mt-8 max-w-xl text-black/75">{profile.summary}</p>
           </Reveal>
           <Reveal delay={0.2}>
             <a href="#about" className="btn-outline mt-10 hover:bg-black hover:text-cream">
