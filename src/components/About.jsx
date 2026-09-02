@@ -16,12 +16,12 @@ export default function About() {
 
           {profile.about.map((para, i) => (
             <Reveal key={i} delay={0.08 + i * 0.06}>
-              <p className="mt-7 max-w-xl text-black/75">{para}</p>
+              <p className="mt-5 max-w-3xl text-black/75">{para}</p>
             </Reveal>
           ))}
 
           <Reveal delay={0.24}>
-            <div className="mt-5 max-w-xl pt-7">
+            <div className="mt-5 max-w-xl pt-5">
               <p className="eyebrow text-black/45">education</p>
               <p className="label-accent mt-3">{education.school}</p>
               <p className="mt-2 text-black/70">
