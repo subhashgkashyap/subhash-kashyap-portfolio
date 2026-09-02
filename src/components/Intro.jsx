@@ -5,7 +5,7 @@ import { profile } from '../data/content'
 export default function Intro() {
   return (
     <section className="bg-cream py-24 md:py-32">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 md:px-12 lg:grid-cols-[300px_minmax(0,1fr)] lg:gap-20 xl:grid-cols-[360px_minmax(0,1fr)] xl:gap-24">
+      <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 md:px-12 lg:grid-cols-[270px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[310px_minmax(0,1fr)] xl:gap-20">
         <Reveal>
           <Artwork
             tone="sand"

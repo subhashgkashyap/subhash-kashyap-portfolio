@@ -23,6 +23,8 @@
   --animate-marquee: marquee 38s linear infinite;
   --animate-marquee-slow: marquee 60s linear infinite;
   --animate-caret: caret 1.05s steps(2, jump-none) infinite;
+  --animate-drift-a: driftA 20s ease-in-out infinite alternate;
+  --animate-drift-b: driftB 26s ease-in-out infinite alternate;
 
   @keyframes marquee {
     from {
@@ -30,6 +32,24 @@
     }
     to {
       transform: translateX(-50%);
+    }
+  }
+
+  @keyframes driftA {
+    from {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    to {
+      transform: translate3d(7%, -5%, 0) scale(1.14);
+    }
+  }
+
+  @keyframes driftB {
+    from {
+      transform: translate3d(0, 0, 0) scale(1.08);
+    }
+    to {
+      transform: translate3d(-6%, 6%, 0) scale(0.94);
     }
   }
 
@@ -57,6 +77,12 @@
     line-height: 21px;
     letter-spacing: 1.2px;
     -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .aura {
+      animation: none;
+    }
   }
 
   ::selection {

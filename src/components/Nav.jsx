@@ -55,12 +55,12 @@ export default function Nav() {
             <Logo />
           </a>
 
-          <nav className="hidden items-center gap-7 xl:flex">
+          <nav className="hidden items-center gap-8 xl:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="group relative text-[14px] tracking-[0.02em] text-black/80 transition-colors hover:text-black"
+                className="group relative text-[15px] font-semibold tracking-[0.01em] text-black/85 transition-colors hover:text-black xl:text-[16px]"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
