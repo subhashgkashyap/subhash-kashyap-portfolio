@@ -1,3 +1,4 @@
+import ScrollProgress from './components/ScrollProgress'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
@@ -13,6 +14,7 @@ import Contact from './components/Contact'
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <Nav />
       <main>
         <Hero />
