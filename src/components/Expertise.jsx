@@ -12,7 +12,7 @@ const panelBg = {
 export default function Expertise() {
   return (
     <section id="expertise" className="bg-cocoa">
-      <div className="mx-auto max-w-[1400px] px-6 py-16 text-center md:px-12 md:py-20">
+      <div className="mx-auto max-w-[1400px] px-6 py-24 text-center md:px-12 md:py-28">
         <Reveal>
           <p className="eyebrow text-cream/60">what I work on</p>
         </Reveal>
@@ -60,7 +60,7 @@ export default function Expertise() {
                   </h3>
                 </Reveal>
                 <Reveal delay={0.12}>
-                  <p className="mt-6 text-justify hyphens-auto text-cream/85">{item.body}</p>
+                  <p className="mt-7 text-cream/85">{item.body}</p>
                 </Reveal>
                 <Reveal delay={0.18}>
                   <a href="#experience" className="btn-solid mt-9">

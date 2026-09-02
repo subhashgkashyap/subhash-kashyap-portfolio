@@ -3,7 +3,7 @@ import { skillGroups } from '../data/content'
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-cream py-16 md:py-20">
+    <section id="skills" className="bg-cream py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-24">
           <div>

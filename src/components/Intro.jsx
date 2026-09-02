@@ -4,7 +4,7 @@ import { profile } from '../data/content'
 
 export default function Intro() {
   return (
-    <section className="bg-cream py-16 md:py-20">
+    <section className="bg-cream py-24 md:py-32">
       <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 md:px-12 lg:grid-cols-[270px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[310px_minmax(0,1fr)] xl:gap-20">
         <Reveal>
           <Artwork
@@ -26,7 +26,7 @@ export default function Intro() {
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-6 max-w-xl text-justify hyphens-auto text-black/75">{profile.summary}</p>
+            <p className="mt-8 max-w-xl text-black/75">{profile.summary}</p>
           </Reveal>
           <Reveal delay={0.2}>
             <a href="#about" className="btn-outline mt-10 hover:bg-black hover:text-cream">
