@@ -93,19 +93,19 @@ export const roles = [
     location: 'Bengaluru',
   },
   {
-    company: 'Infosys',
+    company: 'Infosys Limited',
     title: 'Senior Systems Engineer',
     period: 'April 2025 - January 2026',
     location: 'Bengaluru',
   },
   {
-    company: 'Infosys',
+    company: 'Infosys Limited',
     title: 'Systems Engineer',
     period: 'July 2023 - April 2025',
     location: 'Bengaluru, Karnataka, India',
   },
   {
-    company: 'Infosys',
+    company: 'Infosys Limited',
     title: 'System Engineer Trainee',
     period: 'February 2023 - July 2023',
     location: 'Mysuru, Karnataka, India',

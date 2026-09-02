@@ -6,11 +6,11 @@ import { profile, heroLines } from '../data/content'
 
 const lines = ['Subhash G', 'Kashyap']
 
-const socials = [
-  { label: 'LinkedIn', href: profile.linkedin, external: true },
-  { label: 'GitHub', href: profile.github, external: true },
-  { label: 'Email', href: `mailto:${profile.email}`, external: false },
-]
+// const socials = [
+//   { label: 'LinkedIn', href: profile.linkedin, external: true },
+//   { label: 'GitHub', href: profile.github, external: true },
+//   { label: 'Email', href: `mailto:${profile.email}`, external: false },
+// ]
 
 export default function Hero() {
   const ref = useRef(null)
@@ -93,6 +93,10 @@ export default function Hero() {
           </a>
         </motion.div>
 
+        {/* Social links - removed from the hero; contact lives in the Contact
+            section only. Uncomment this block AND the `socials` array above to
+            bring them back. Both must be uncommented together.
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -112,6 +116,7 @@ export default function Hero() {
             </a>
           ))}
         </motion.div>
+        */}
       </motion.div>
     </section>
   )
