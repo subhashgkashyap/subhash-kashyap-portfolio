@@ -1,4 +1,4 @@
-import Artwork from './Artwork'
+import TechIllustration from './TechIllustration'
 import Reveal from './Reveal'
 import { profile, education } from '../data/content'
 
@@ -42,33 +42,8 @@ export default function About() {
           </Reveal>
         </div>
 
-        <div className="order-1 grid grid-cols-2 gap-5 lg:order-2">
-          <Reveal className="col-span-2">
-            <Artwork
-              tone="blush"
-              src="/images/about-workspace.jpg"
-              alt="Multi-monitor developer workspace"
-              className="aspect-[16/10] w-full"
-              caption="Bengaluru, India"
-            />
-          </Reveal>
-          <Reveal delay={0.08}>
-            <Artwork
-              tone="rose"
-              src="/images/about-posing.jpg"
-              alt="Software engineer standing with arms folded"
-              focal="top"
-              className="aspect-square w-full"
-            />
-          </Reveal>
-          <Reveal delay={0.14}>
-            <Artwork
-              tone="clay"
-              src="/images/about-focus.jpg"
-              alt="Engineer focused on a screen of code"
-              className="aspect-square w-full"
-            />
-          </Reveal>
+        <div className="order-1 lg:order-2">
+          <TechIllustration className="w-full" />
         </div>
       </div>
     </section>

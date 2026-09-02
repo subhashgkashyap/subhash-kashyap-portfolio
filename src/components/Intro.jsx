@@ -9,8 +9,8 @@ export default function Intro() {
         <Reveal>
           <Artwork
             tone="sand"
-            src="/images/intro-desk.jpg"
-            alt="Developer at a laptop in an office"
+            src="/images/hero-portrait.jpg"
+            alt="Software engineer standing with a coffee mug"
             className="aspect-[4/5] w-full"
             caption="ServiceNow · since 2023"
           />

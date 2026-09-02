@@ -66,9 +66,6 @@ export default function Nav() {
                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <a href="#contact" className="btn-outline hover:bg-black hover:text-cream">
-              get in touch
-            </a>
           </nav>
 
           {/* Menu toggle - everything below xl, where the full nav no longer fits */}

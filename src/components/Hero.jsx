@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
-import Artwork from './Artwork'
 import Typewriter from './Typewriter'
 import { easing } from './Reveal'
 import { profile, heroLines } from '../data/content'
@@ -10,8 +9,6 @@ const lines = ['Subhash G', 'Kashyap']
 export default function Hero() {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const leftY = useTransform(scrollYProgress, [0, 1], [0, -70])
-  const rightY = useTransform(scrollYProgress, [0, 1], [0, -130])
   const textY = useTransform(scrollYProgress, [0, 1], [0, 60])
 
   return (
@@ -20,30 +17,6 @@ export default function Hero() {
       ref={ref}
       className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-cream pt-32 pb-16 md:pt-40"
     >
-      {/* flanking editorial panels */}
-      <motion.div
-        style={{ y: leftY }}
-        className="pointer-events-none absolute top-[22%] left-0 hidden w-[16vw] max-w-[240px] lg:block"
-      >
-        <Artwork
-          tone="blush"
-          src="/images/hero-desk.jpg"
-          alt="Developer working across two screens of code"
-          className="aspect-[3/4]"
-        />
-      </motion.div>
-      <motion.div
-        style={{ y: rightY }}
-        className="pointer-events-none absolute right-0 bottom-[10%] hidden w-[18vw] max-w-[280px] lg:block"
-      >
-        <Artwork
-          tone="rose"
-          src="/images/hero-portrait.jpg"
-          alt="Software engineer standing with a coffee mug"
-          className="aspect-[4/5]"
-        />
-      </motion.div>
-
       <motion.div style={{ y: textY }} className="relative z-10 mx-auto w-full max-w-[1400px] px-6">
         <motion.p
           initial={{ opacity: 0, y: 14 }}
@@ -99,25 +72,7 @@ export default function Hero() {
             resume
           </a>
         </motion.div>
-
-        {/* On small screens the flanking panels are hidden, so the hero carries
-            a single image of its own instead of ending on empty space. */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.95, ease: easing }}
-          className="mx-auto mt-14 max-w-[280px] lg:hidden"
-        >
-          <Artwork
-            tone="blush"
-            src="/images/hero-portrait.jpg"
-            alt="Software engineer standing with a coffee mug"
-            focal="top"
-            className="aspect-[4/5] w-full"
-          />
-        </motion.div>
       </motion.div>
-
     </section>
   )
 }
