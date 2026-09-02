@@ -12,7 +12,7 @@ const socials = [
 export default function Contact() {
   return (
     <>
-      <section id="contact" className="bg-cream py-24 text-center md:py-32">
+      <section id="contact" className="bg-cream py-16 text-center md:py-20">
         <div className="mx-auto max-w-[1400px] px-6 md:px-12">
           <Reveal>
             <p className="label-accent text-black/60">let’s talk</p>

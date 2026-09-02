@@ -3,7 +3,7 @@ import { roles } from '../data/content'
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-cream py-24 md:py-32">
+    <section id="experience" className="bg-cream py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <Reveal>
           <p className="eyebrow text-black/50">experience</p>
@@ -15,10 +15,10 @@ export default function Experience() {
         </Reveal>
 
         {/* Role timeline */}
-        <div className="mt-16">
+        <div className="mt-10">
           {roles.map((role, i) => (
             <Reveal key={`${role.company}-${role.title}`} delay={i * 0.05}>
-              <div className="rule group grid grid-cols-1 gap-2 py-7 transition-colors duration-300 hover:bg-black/[0.03] md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)_minmax(0,1fr)] md:items-baseline md:gap-8">
+              <div className="rule group grid grid-cols-1 gap-2 py-5 transition-colors duration-300 hover:bg-black/[0.03] md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)_minmax(0,1fr)] md:items-baseline md:gap-8">
                 <p className="eyebrow text-black/50">{role.period}</p>
                 <h3 className="h-display text-[clamp(1.25rem,2.4vw,1.9rem)]">
                   {role.title}

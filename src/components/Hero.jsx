@@ -6,12 +6,6 @@ import { profile, heroLines } from '../data/content'
 
 const lines = ['Subhash G', 'Kashyap']
 
-const socials = [
-  { label: 'LinkedIn', href: profile.linkedin, external: true },
-  { label: 'GitHub', href: profile.github, external: true },
-  { label: 'Email', href: `mailto:${profile.email}`, external: false },
-]
-
 export default function Hero() {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
@@ -93,25 +87,6 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.9, delay: 1 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3"
-        >
-          {socials.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target={s.external ? '_blank' : undefined}
-              rel={s.external ? 'noreferrer' : undefined}
-              className="group eyebrow relative text-black/50 transition-colors hover:text-black"
-            >
-              {s.label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-black transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
-        </motion.div>
       </motion.div>
     </section>
   )

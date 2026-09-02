@@ -3,7 +3,7 @@ import { gettingToKnow } from '../data/content'
 
 export default function GetToKnow() {
   return (
-    <section className="grain bg-sand py-24 md:py-32">
+    <section className="grain bg-sand py-16 md:py-20">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <Reveal>
           <p className="label-accent text-center text-black/60">get to know subhash</p>
