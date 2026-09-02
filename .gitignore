@@ -16,3 +16,6 @@ Thumbs.db
 *.local
 .env
 .env.local
+
+# Stale duplicate clone - delete the folder; never commit it
+subhash-kashyap-portfolio/

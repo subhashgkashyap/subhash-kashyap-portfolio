@@ -5,7 +5,7 @@ import { profile, education } from '../data/content'
 export default function About() {
   return (
     <section id="about" className="bg-cream py-24 md:py-32">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 md:px-12 lg:grid-cols-2 lg:gap-24">
+      <div className="mx-auto grid max-w-[1400px] items-center gap-14 px-6 md:px-12 lg:grid-cols-[minmax(0,600px)_340px] lg:gap-20 xl:grid-cols-[minmax(0,640px)_420px] xl:gap-24">
         <div className="order-2 lg:order-1">
           <Reveal>
             <h2 className="h-serif text-[clamp(1.9rem,3.6vw,2.75rem)]">
