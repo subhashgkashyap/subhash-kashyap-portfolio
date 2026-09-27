@@ -215,6 +215,7 @@ export const certifications = [
   'ServiceNow Certified Application Developer',
   'ServiceNow Certified Implementation Specialist - IT Service Management',
   'ServiceNow Certified Implementation Specialist - Human Resources',
+  'ServiceNow Certified Implementation Specialist - Data Foundations (CMDB and CSDM)',
 ]
 
 export const education = {
